@@ -4,7 +4,7 @@ body,  p, h1, ul, li, blockquote {
 }
 
 body {
-  font-family: 'Vollkorn', serif;
+  font-family: 'Vollkorn', Georgia, serif;
 }
 
 li {
@@ -19,6 +19,7 @@ img {
   max-width: 100%;
   border-radius: 5px;
 }
+
 /* === GRID GERAL ===*/
 
 .estrutura {
@@ -69,7 +70,7 @@ img {
   background: #fafbfc;
   padding: 30px;
 }
-.sidenav li a {
+.sidenav li a {  /**/
   display: block;
   min-width: 60px;
   max-width: 100px;
@@ -77,19 +78,23 @@ img {
   background: white;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
-  transition: .1s ease-out; /* mudar a cor no hover*/
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, .15);
+  transition: .1s ease-out; /* transição mais lenta durante a mudança de cor no hover */
 }
 .sidenav li a:hover {
   background: #b07dfb;
 }
 
-
-
-
 /* CONTENT*/
 .content {
   grid-area: content;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de tamanhos iguais */
+  gap: 30px;
+  
 }
 
 /* ANUNCIOS*/
@@ -97,7 +102,7 @@ img {
   grid-area: anuncios;
   display: grid;
   background: #fafbfc;
-  align-content: start;
+  align-content: start; /* normalmente o align ajusta o eixo Y (vertical)*/
   padding: 30px;
   gap: 30px;
 }
